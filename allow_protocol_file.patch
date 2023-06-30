@@ -1,0 +1,12 @@
+diff -ur rpkg-util-macros-orig/tests/run rpkg-util-macros/tests/run
+--- rpkg-util-macros-orig/tests/run	2023-05-30 08:51:11.465641122 +0000
++++ rpkg-util-macros/tests/run	2023-05-30 08:51:11.465641122 +0000
+@@ -1,6 +1,8 @@
+ #!/bin/bash
+ 
+ export testdir="$(builtin cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
++# workaround for git secure patch which may fail the tests
++git config protocol.file.allow always
+ 
+ for dir in `ls -d "$testdir"/test_*/`; do
+     echo "====================== $(basename ${dir}) ======================"
