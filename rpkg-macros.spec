@@ -15,7 +15,6 @@ URL: https://pagure.io/rpkg-util.git
 # git checkout rpkg-macros-2.0-1
 # ./rpkg spec --sources
 Source0: rpkg-util-macros-28034317.tar.gz
-Patch1: allow_protocol_file.patch
 
 BuildArch: noarch
 
